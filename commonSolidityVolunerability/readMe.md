@@ -117,7 +117,8 @@ contract InsecureMerkleRoot {
 ## 数值溢出问题
 - uint256 a = uint8(b) + 1
   - 如果此时b是2^8-1, 那么a的值不会变成256， 而是会直接revert, 因为超过了uint8的上限。
-- [示例代码](xxx)
+  - 
+- [示例代码](./CyberAccidentAnalysis/PrimitiveOverflow/PrimitiveOverflow.sol)
 
 ## solidity截断问题
 - solidity0.8以前，uint256可能存在溢出问题，需要使用对应的safeCast库来进行安全加减乘除
